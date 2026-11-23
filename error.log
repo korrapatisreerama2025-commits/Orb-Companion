@@ -1,0 +1,24 @@
+[2026-11-22T09:12:51.056Z] [UNCAUGHT_EXCEPTION] Status: CRITICAL | Model: claude-haiku-5-5
+  Details: Cannot read properties of undefined (reading 'whenReady')
+  reason: TypeError: Cannot read properties of undefined (reading 'whenReady')
+    at Object.<anonymous> (C:\Users\Korra\companion\main.js:165:5)
+    at Module._compile (
+
+[2026-11-22T09:48:19.434Z] [UNCAUGHT_EXCEPTION] Status: CRITICAL | Model: claude-haiku-5-5
+  Details: Cannot read properties of undefined (reading 'whenReady')
+  reason: TypeError: Cannot read properties of undefined (reading 'whenReady')
+    at Object.<anonymous> (C:\Users\Korra\companion\main.js:165:5)
+    at Module._compile (
+
+[2026-11-23T08:44:27.779Z] [RENDER_PROCESS_GONE] Status: CRITICAL | Model: claude-haiku-5-5
+  Details: Renderer process terminated: killed
+  reason: killed
+
+[2026-11-23T08:53:51.343Z] [RENDER_PROCESS_GONE] Status: CRITICAL | Model: claude-haiku-5-5
+  Details: Renderer process terminated: crashed
+  reason: crashed
+
+[2026-11-23T10:16:06.416Z] [RENDER_PROCESS_GONE] Status: CRITICAL | Model: claude-haiku-5-5
+  Details: Renderer process terminated: killed
+  reason: killed
+

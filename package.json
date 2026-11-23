@@ -1,0 +1,104 @@
+{
+  "name": "desktop-ai-companion",
+  "productName": "Desktop AI Companion",
+  "version": "1.0.0",
+  "description": "A sleek, glowing desktop AI companion that lives on your screen, watches what you do, and chats like a friend.",
+  "main": "main.js",
+  "author": "Korra",
+  "license": "MIT",
+  "scripts": {
+    "start": "node start.js .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "dist": "electron-builder --win",
+    "dist:installer": "electron-builder --win nsis",
+    "dist:portable": "electron-builder --win portable"
+  },
+  "keywords": [
+    "electron",
+    "companion",
+    "ai",
+    "claude",
+    "desktop-pet"
+  ],
+  "devDependencies": {
+    "electron": "^45.4.1",
+    "electron-builder": "^26.18.0",
+    "vitest": "^5.1.1"
+  },
+  "dependencies": {
+    "active-win": "^8.2.1"
+  },
+  "build": {
+    "appId": "com.companion.desktopai",
+    "productName": "Desktop AI Companion",
+    "copyright": "Copyright © 2026",
+    "npmRebuild": false,
+    "directories": {
+      "output": "dist",
+      "buildResources": "assets"
+    },
+    "asar": true,
+    "asarUnpack": [
+      "**/*.node"
+    ],
+    "files": [
+      "main.js",
+      "config.js",
+      "capture.js",
+      "api.js",
+      "scheduler.js",
+      "settings.js",
+      "clipboard.js",
+      "notes.js",
+      "games.js",
+      "modes.js",
+      "mood.js",
+      "security.js",
+      "ipcValidator.js",
+      "actions.js",
+      "bond.js",
+      "regionFocus.js",
+      "preload.js",
+      "renderer/**/*",
+      "assets/**/*",
+      "settings.json",
+      "memory.json",
+      "!scripts/**/*",
+      "!tests/**/*",
+      "!test*.js",
+      "!vitest.config.*",
+      "!.github/**/*"
+    ],
+    "win": {
+      "icon": "assets/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Desktop AI Companion",
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico",
+      "installerHeaderIcon": "assets/icon.ico"
+    },
+    "portable": {
+      "artifactName": "${productName}-Portable-${version}.${ext}"
+    }
+  }
+}

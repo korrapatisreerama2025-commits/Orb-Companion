@@ -1,0 +1,11 @@
+{
+  "userName": "Korra",
+  "facts": [
+    "Name is Korra",
+    "Working on an Electron desktop companion app"
+  ],
+  "goals": [
+    "Build and polish the Desktop AI Companion features",
+    "Ship the v1.0 release"
+  ]
+}
